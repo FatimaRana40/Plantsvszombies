@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{bcde22cf-c39b-422c-843a-8ea159bae1af}</ProjectGuid>
+    <RootNamespace>Plantsvszombies</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-system-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;sfml-audio-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-system.lib;sfml-graphics.lib;sfml-window.lib;sfml-audio.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\BeginnersGarden.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\cherrybomb.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\DancingZombies.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\flyingZombies.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\FoggyForest.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\FootballZombie.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\fumeshroom.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\Game.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\lawnmower.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\levels.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\main.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\NighttimeSeIge.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\peashooter.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\plantfactory.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\plants.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\repeater.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\score.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\SimpleZombie.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\snowpeas.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\summonZombie.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\sun.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\sunflower.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\SunflowerFeilds.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\TrashZombie.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\wallnut.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\weapon..cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\ZombieFactory.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\ZombieOutskirts.cpp" />
+    <ClCompile Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\Zombies.cpp" />
+    <ClCompile Include="FileName.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\BeginnersGarden.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\cherrybomb.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\coordinates.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\DancingZombies.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\flyingZombie.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\FoggyForest.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\FootballZombie.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\Fumeshroom.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\Game.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\gamefeild.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\lawnmower.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\level6.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\levels.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\NighttimeSeIge.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\peashooter.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\plantfactory.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\Plants.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\repeater.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\score.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\SimpleZombie.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\snowpeas.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\summonZombie.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\sun.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\sunflower.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\SunflowerFeilds.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\TrashZombie.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\wallnut.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\weapon.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\ZombieFactory.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\ZombieOutskirts.h" />
+    <ClInclude Include="..\..\..\..\Documents\i230640_i230773[1]\i230640_i230773\Zombies.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
